@@ -63,13 +63,13 @@ class LoginFragment : Fragment(){
         val password=binding.passTextField.text.toString()
 
         if(TextUtils.isEmpty(email) && TextUtils.isEmpty(password)){
-            binding.emailTextField.error = "Lütfen email adresi giriniz"
-            binding.passTextField.error = "Lütfen şifre giriniz"
+            binding.emailTextField.error = "L'email est obligatoire"
+            binding.passTextField.error = "Le mot de passe est obligatoire"
         }
         else  if(TextUtils.isEmpty(email)){
-            binding.emailTextField.error = "Lütfen email adresi giriniz"
+            binding.emailTextField.error = "L'email est obligatoire"
         }else if(TextUtils.isEmpty(password)){
-            binding.passTextField.error = "Lütfen şifre giriniz"
+            binding.passTextField.error = "Le mot de passe est obligatoire"
         }
 
         if (email.isNotEmpty() && password.isNotEmpty()){

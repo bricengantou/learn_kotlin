@@ -42,7 +42,7 @@ class ForgotPassFragment : Fragment() {
         val email = dataBinding.emailTextField.text.toString()
 
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(context, "Lütfen email adresinizi giriniz", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "L'email est obligatoire", Toast.LENGTH_SHORT).show();
             return;
         }
 

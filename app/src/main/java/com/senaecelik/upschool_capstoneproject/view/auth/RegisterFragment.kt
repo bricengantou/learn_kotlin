@@ -56,13 +56,13 @@ class RegisterFragment : Fragment() {
         val password=dataBinding.passTextField.text.toString()
 
         if(TextUtils.isEmpty(email) && TextUtils.isEmpty(password)){
-                dataBinding.emailTextField.error = "Lütfen email adresi giriniz"
-                dataBinding.passTextField.error = "Lütfen şifre giriniz"
+                dataBinding.emailTextField.error = "L'email est obligatoire"
+                dataBinding.passTextField.error = "Le mot de passe est obligatoire"
             }
         else  if(TextUtils.isEmpty(email)){
-            dataBinding.emailTextField.error = "Lütfen email adresi giriniz"
+            dataBinding.emailTextField.error = "L'email est obligatoire"
         }else if(TextUtils.isEmpty(password)){
-            dataBinding.passTextField.error = "Lütfen şifre giriniz"
+            dataBinding.passTextField.error = "Le mot de passe est obligatoire"
         }
 
 
@@ -71,7 +71,7 @@ class RegisterFragment : Fragment() {
 
             if(!task.isSuccessful) {
                 if(password.length<6){
-                    dataBinding.passTextField.error = "Şifre minimum 6 hanel"
+                    dataBinding.passTextField.error = "Doit faire minimum 6 caracteres"
                 }else{
                     Toast.makeText(context, "Fail", Toast.LENGTH_LONG).show();
                 }
